@@ -1,32 +1,27 @@
 package Thirdprj;
 
-public class Teacher {
-    public String name;
-    public String subject;
-    public String journal;
+import java.util.List;
 
-    public void SayHello() {
-        System.out.println("Добрый день,ребята." + "Меня зовут-" + name);
-    }
+public class Teacher extends Human {
 
-    public void TheSubject() {
-        System.out.println("Я преподаю предмет" + " " + subject);
-    }
-    public void AskAboutName(Students student){
-        System.out.println("Назови своё имя,пожалуйста.");
-        journal = student.MyNameIs();
-    }
-    public void AskAboutDate(Students student){
-        System.out.println("Какая сегодня дата?");
-        journal= student.TheDateOfToday();
-    }
-    public void AskAboutTopic(Students student){
-        System.out.println("Какая тема сегодняшнего урока?");
-        journal=student.TheTopicOfLesson();
-    }
-    public void AskAboutAbsentStudents(Students student){
-        System.out.println("Сколько отсутвует человек?");
-        journal= student.absentStudents()+"";
+    List<Student> studentsList;
+
+    public Teacher(List<Student> studentsList) {
+        this.studentsList = studentsList;
     }
 
+    @Override
+    public void sayName() {
+        System.out.println("My name is Maria Ivanovna.");
+    }
+
+    @Override
+    public void sayAge() {
+        System.out.println("I'm 35 years old.");
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher{" + "studentsList=" + studentsList + '}';
+    }
 }
