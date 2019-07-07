@@ -2,18 +2,12 @@ package Min;
 
 public class Main {
     public static void main(String[] args) {
-        for (int i = 0; i < 4; i++)
-            System.out.println(min(343, 434, 634));
+        for (int i = 0; i < 3; i++)
+            System.out.println(Math.min(24, 56));
     }
 
-    public static int min(int a, int b, int c) {
-        if (a < b && a < c) {
-            return a;
-        } else if (b < a && b < c) {
-            return b;
-        } else {
-            return c;
-        }
+    public static int min(int a, int b) {
+        return min(a, b);
 
     }
 }
