@@ -12,32 +12,43 @@ public class Main {
         int y = Integer.parseInt(reader.readLine());
         System.out.println("Введите операцию:");
         String operation = reader.readLine();
-        if (operation.equals("+")) {
-            System.out.println("Сумма введенных чисел равна : " + add(x, y));
-        } else if (operation.equals("-")) {
-            System.out.println("Разность введенных чисел равна: " + sub(x, y));
-        } else if (operation.equals("*")) {
-            System.out.println("Произведение введенных чисел равно: " + mult(x, y));
-        } else if (operation.equals("/")) {
-            System.out.println("Деление введенных чиел равно: " + div(x, y));
-
+        System.out.println("Ответ:");
+        switch (operation) {
+            case "+":
+                add(x, y);
+                break;
+            case "-":
+                sub(x, y);
+                break;
+            case "*":
+                mult(x, y);
+                break;
+            case "/":
+                div(x, y);
+                break;
+            default:
+                System.out.println("Нераспознанная операция");
         }
 
     }
 
-    public static int add(int x, int y) {
-        return x + y;
+    public static void add(int x, int y) {
+        System.out.println(x + y);
     }
 
-    public static int sub(int x, int y) {
-        return x - y;
+    public static void sub(int x, int y) {
+        System.out.println(x - y);
     }
 
-    public static int mult(int x, int y) {
-        return x * y;
+    public static void mult(int x, int y) {
+        System.out.println(x * y);
     }
 
-    public static int div(int x, int y) {
-        return x / y;
+    public static void div(int x, int y) {
+        if (y == 0) {
+            System.out.println("Деление на ноль запрещено");
+        } else
+            System.out.println(x / y);
+
     }
-}
+    }
