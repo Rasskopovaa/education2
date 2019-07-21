@@ -7,9 +7,9 @@ public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите первое число:");
-        int x = Integer.parseInt(reader.readLine());
+        float x = Float.parseFloat(reader.readLine());
         System.out.println("Введите второе число:");
-        int y = Integer.parseInt(reader.readLine());
+        float y = Float.parseFloat(reader.readLine());
         System.out.println("Введите операцию:");
         String operation = reader.readLine();
         System.out.println("Ответ:");
@@ -32,19 +32,19 @@ public class Main {
 
     }
 
-    public static void add(int x, int y) {
+    public static void add(float x, float y) {
         System.out.println(x + y);
     }
 
-    public static void sub(int x, int y) {
+    public static void sub(float x, float y) {
         System.out.println(x - y);
     }
 
-    public static void mult(int x, int y) {
+    public static void mult(float x, float y) {
         System.out.println(x * y);
     }
 
-    public static void div(int x, int y) {
+    public static void div(float x, float y) {
         if (y == 0) {
             System.out.println("Деление на ноль запрещено");
         } else
